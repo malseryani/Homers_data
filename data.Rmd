@@ -22,7 +22,7 @@ densityplot(my1000,main="original data")
 
 ```
 
-According to this density plot we can see that there are two peaks and they look about the same size, which means it is bimodel. This means there is bimodel distribution.
+According to this density plot we can see that there are two peaks and they look about the same size, which means it is bimodel. This means there is bimodel distribution and both values in this data have the highest frequency.
 
 
 
