@@ -22,4 +22,5 @@ densityplot(my1000,main="original data")
 
 ```
 
+According to this density plot we can see that there are two peaks which means it is bimodel. This means there is bimodel distribution.
 
