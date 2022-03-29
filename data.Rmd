@@ -21,7 +21,7 @@ densityplot(my1000,main="original data")
 favstats(my1000)
 ```
 
-According to this density plot we can see that there are two peaks and they look about the same size, which means it is bimodel. This means there is bimodel distribution and both values in this data have the highest frequency. The mean is. 49.1 and the standarddeviation is 42.2.
+According to this density plot we can see that there are two peaks and they look about the same size, which means it is bimodel. This means there is bimodel distribution and both values in this data have the highest frequency. The mean is. 49.1 and the standard deviation is 42.2.
 
 
 
@@ -33,7 +33,7 @@ x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 2")
 favstats(x.avg)
 ```
-According to this plot, we can see that there are 3 peaks and the middle peak being the highest one. The mean is 48.5 and the standard deviation is 29.5. When we actually do the calculation, we get 
+According to this plot, we can see that there are 3 peaks and the middle peak being the highest one. The mean is 48.5 and the standard deviation is 29.5. 
 
 
 ```{r}
@@ -44,7 +44,9 @@ x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 3")
 favstats(x.avg)
 ```
-In the. plot, we can see that there are four peaks. The mean is. 50.6 and the standard deviation is 23.8 When we actually do the calculation, we get 21.87 which is very close to the standard deviation.
+In this plot, we can see that there are four peaks. The mean is 50.6 and the standard deviation is 23.8 When we actually do the calculation, we get a value of 21.87 which is very close to the standard deviation.
+
+
 
 ```{r}
 numb = 4
@@ -54,7 +56,8 @@ x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 4")
 favstats(x.avg)
 ```
-Here the mean is 50.44 and the sd is 20.61. 
+Here we see that there are a total of five peaks with the middle peak being the highest one. The mean is 50.44, the SD is 20.61, and the calculated value is 21.1 
+
 
 
 ```{r}
@@ -65,6 +68,12 @@ x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 9")
 favstats(x.avg)
 ```
+
+Here we can see that there are a few peaks but it looks like the two highest peaks want to merge into just one peak. The mean is 50.8 and the SD is 13.8
+The calculated value is 14.0 which is very close to 13.8
+
+
+
 
 ```{r}
 numb = 16
@@ -107,4 +116,4 @@ Here we can see that there is only one peak now which indicates normal distribut
 
 
 
-In conclusion, after analyzing each sample, we can verify that we have normal distribution. The central limit theorem was very close or almost the same to the normal distribution.
+In conclusion, after analyzing each sample, we can verify that we have normal distribution. We were able to use the central limit theorem to calculate and apply it to each sample. The central limit theorem was very close or almost the same to the normal distribution.
