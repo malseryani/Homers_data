@@ -5,24 +5,23 @@ date: 'Spring 2022'
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 require(tidyverse)
 require(lattice)
+require(tigerstats)
 ```
+
 
 ```{r}
 Homers_data <- read.csv(file="Homers_data.csv")
 my1000 <- sample(Homers_data$kkardashtemp ,size = 1000, replace=T)
 densityplot(my1000,main="original data")
-
+favstats(my1000)
 ```
 
-According to this density plot we can see that there are two peaks and they look about the same size, which means it is bimodel. This means there is bimodel distribution and both values in this data have the highest frequency.
+According to this density plot we can see that there are two peaks and they look about the same size, which means it is bimodel. This means there is bimodel distribution and both values in this data have the highest frequency. The mean is. 49.7 and the standarddeviation is 41.9.
 
 
 
@@ -32,6 +31,62 @@ Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
 mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 2")
+favstats(x.avg)
+```
+According to this plot, we can see that there are 3 peaks. The middl
+
+
+```{r}
+numb = 3
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 3")
+favstats(x.avg)
 ```
 
 
+```{r}
+numb = 4
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 4")
+favstats(x.avg)
+```
+
+```{r}
+numb = 9
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 9")
+favstats(x.avg)
+```
+
+```{r}
+numb = 16
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 16")
+favstats(x.avg)
+```
+
+```{r}
+numb = 25
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 25")
+favstats(x.avg)
+```
+
+```{r}
+numb = 36
+Hdata   <- sample(Homers_data$kkardashtemp ,size = numb*1000, replace=T)
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 36")
+favstats(x.avg)
+```
